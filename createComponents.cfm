@@ -10,5 +10,5 @@
 	<cfset component = temp[ArrayLen(temp)] />
 	<cfset component = ListToArray(component, "\.")[1] />
 
-	<cfset application.components[component] = "component." & component />
+	<cfset application.components[component] = createObject("component", "components." & component) />
 </cfloop>
